@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "Reddit Saver: Download Reddit Images, Videos",
+  "short_name": "Reddit Saver",
+  "version": "1.0.0",
+  "description": "Save the pictures, galleries and videos (with sound) from a Reddit post, user or subreddit in one ZIP. Free, no tracking.",
+  "permissions": [
+    "scripting",
+    "downloads",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*.reddit.com/*",
+    "https://i.redd.it/*",
+    "https://preview.redd.it/*",
+    "https://external-preview.redd.it/*",
+    "https://v.redd.it/*"
+  ],
+  "background": {
+    "scripts": [
+      "hostmap.js",
+      "background.js"
+    ]
+  },
+  "action": {
+    "default_title": "Save this Reddit post, user or subreddit with Reddit Saver",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "homepage_url": "https://techygeekshome.info/browser-extensions/reddit-saver/",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "redditsaver@techygeekshome.info",
+      "strict_min_version": "142.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  }
+}

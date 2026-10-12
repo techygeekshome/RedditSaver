@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Saver</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="results.css">
+</head>
+<body>
+<header>
+  <div class="brand" id="brand"></div>
+  <h1 id="title">Loading...</h1>
+  <div id="stats" class="stats"></div>
+  <div class="bar"><div id="bar"></div></div>
+</header>
+
+<section id="help" class="help" hidden>
+  <h2 id="helpTitle">How to use</h2>
+  <p id="helpText"></p>
+</section>
+
+<section id="opts" class="controls opts" hidden></section>
+
+<section id="controls" class="controls" hidden>
+  <div class="seg" role="group" aria-label="Show">
+    <button data-show="all" class="on">All</button>
+    <button data-show="image">Images <span id="nImg">0</span></button>
+    <button data-show="video">Videos <span id="nVid">0</span></button>
+  </div>
+  <label>Minimum size
+    <select id="minSide">
+      <option value="0">Any size</option>
+      <option value="100">100px+</option>
+      <option value="300">300px+</option>
+      <option value="500">500px+</option>
+      <option value="800">800px+</option>
+      <option value="1000">1000px+</option>
+      <option value="1500">1500px+</option>
+      <option value="2000">2000px+</option>
+    </select>
+  </label>
+  <label class="tog"><input type="checkbox" id="nearDup"> Remove near-duplicates</label>
+  <label class="tog"><input type="checkbox" id="showRemoved"> Show removed</label>
+  <span class="spacer"></span>
+  <button id="all" class="ghost">Select all</button>
+  <button id="none" class="ghost">Select none</button>
+  <button id="retry" class="ghost" hidden>Retry failed</button>
+  <button id="dl" class="primary" disabled>Download ZIP</button>
+</section>
+
+<main id="grid" class="grid"></main>
+<p id="legal" class="foot" hidden></p>
+
+<script src="hostmap.js"></script>
+<script src="zip.js"></script>
+<script src="lib-mux-mp4.js"></script>
+<script src="mp4.js"></script>
+<script src="streams.js"></script>
+<script src="site.js"></script>
+<script src="results.js"></script>
+</body>
+</html>
